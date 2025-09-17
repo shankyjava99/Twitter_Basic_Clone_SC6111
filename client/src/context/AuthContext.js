@@ -95,7 +95,7 @@ export const AuthProvider = ({ children }) => {
 
     const walletLogin = async (account, signature) => {
         // For now, we'll just simulate wallet login
-        // In a real implementation, you'd verify the signature on the backend
+        // In a real implementation, we will verify the signature on the backend
         try {
             // Create a mock user for wallet login
             const mockUser = {

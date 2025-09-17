@@ -219,6 +219,7 @@ body {
 .auth-container {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #1da1f2 0%, #0d47a1 100%);
@@ -424,4 +425,62 @@ body {
 
 .mt-2 {
     margin-top: 1rem;
+}
+
+/* Footer */
+.team-footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid #2f3336;
+    margin-top: auto;
+    padding: 1.5rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.footer-content h3 {
+    color: #1da1f2;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.member {
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(29, 161, 242, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(29, 161, 242, 0.2);
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .member {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .footer-content h3 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
 }

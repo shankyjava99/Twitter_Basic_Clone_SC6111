@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useWallet } from '../context/WalletContext';
 import { Mail, Lock, Wallet, ArrowLeft } from 'lucide-react';
 import toast from 'react-hot-toast';
+import Footer from './Footer';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -228,6 +229,7 @@ const Register = () => {
                     </Link>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

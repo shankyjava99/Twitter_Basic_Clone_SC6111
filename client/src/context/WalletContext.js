@@ -63,7 +63,7 @@ export const WalletProvider = ({ children }) => {
                     toast.error('Phantom wallet detected. Please switch to MetaMask.');
                 } else {
                     console.log('Non-MetaMask wallet detected');
-                    toast.error('Please use MetaMask wallet. Other wallets are not supported.');
+                    `toast.error('Please use MetaMask wallet. Other wallets are not supported.');
                 }
                 return { success: false, error: 'Not MetaMask wallet' };
             }
@@ -150,7 +150,7 @@ export const WalletProvider = ({ children }) => {
             // Send transaction
             const tx = await signer.sendTransaction(transaction);
 
-            toast.success(`Transaction sent! Hash: ${tx.hash}`);
+            toast.success(`Transaction sent! Hash: ${ tx.hash } `);
             return { success: true, hash: tx.hash };
         } catch (error) {
             console.error('Transaction error:', error);
@@ -188,7 +188,7 @@ export const WalletProvider = ({ children }) => {
             };
 
             const handleChainChanged = (chainId) => {
-                toast.info(`Network changed to chain ID: ${chainId}`);
+                toast.info(`Network changed to chain ID: ${ chainId } `);
             };
 
             window.ethereum.on('accountsChanged', handleAccountsChanged);
